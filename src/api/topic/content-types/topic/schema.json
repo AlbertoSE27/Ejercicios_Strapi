@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topics",
+  "info": {
+    "singularName": "topic",
+    "pluralName": "topics",
+    "displayName": "Topics",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tittle": {
+      "type": "string"
+    },
+    "asignature": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "unique": true
+    },
+    "subtopics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::topic.topic",
+      "mappedBy": "topic"
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "subtopics"
+    },
+    "evento": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::evento.evento",
+      "inversedBy": "topics"
+    }
+  }
+}

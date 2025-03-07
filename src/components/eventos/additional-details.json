@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_eventos_additional_details",
+  "info": {
+    "displayName": "Additional Details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "hour": {
+      "type": "time"
+    },
+    "ubication": {
+      "type": "string"
+    }
+  }
+}

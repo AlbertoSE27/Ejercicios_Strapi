@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_classes_aditional_details",
+  "info": {
+    "displayName": "Additional Details",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "classroom": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "schedule": {
+      "type": "time"
+    }
+  }
+}
