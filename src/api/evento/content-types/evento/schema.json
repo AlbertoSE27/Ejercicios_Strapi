@@ -41,6 +41,15 @@
       "relation": "oneToMany",
       "target": "api::material.material",
       "mappedBy": "evento"
+    },
+    "components": {
+      "type": "dynamiczone",
+      "components": [
+        "ejercicio5.text",
+        "ejercicio5.rich-text",
+        "ejercicio5.media",
+        "ejercicio5.components"
+      ]
     }
   }
 }

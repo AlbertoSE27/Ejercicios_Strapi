@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ejercicio5_rich_texts",
+  "info": {
+    "displayName": "richText",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

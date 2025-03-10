@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_ejercicio5_texts",
+  "info": {
+    "displayName": "text"
+  },
+  "options": {},
+  "attributes": {
+    "tittle": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

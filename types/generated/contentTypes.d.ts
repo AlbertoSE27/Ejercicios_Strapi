@@ -420,6 +420,14 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
       'eventos.additional-details',
       true
     >;
+    components: Schema.Attribute.DynamicZone<
+      [
+        'ejercicio5.text',
+        'ejercicio5.rich-text',
+        'ejercicio5.media',
+        'ejercicio5.components',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

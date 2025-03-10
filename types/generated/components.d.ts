@@ -13,6 +13,49 @@ export interface ClassesAditionalDetails extends Struct.ComponentSchema {
   };
 }
 
+export interface Ejercicio5Components extends Struct.ComponentSchema {
+  collectionName: 'components_ejercicio5_components';
+  info: {
+    displayName: 'components';
+  };
+  attributes: {};
+}
+
+export interface Ejercicio5Media extends Struct.ComponentSchema {
+  collectionName: 'components_ejercicio5_media';
+  info: {
+    displayName: 'media';
+  };
+  attributes: {
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
+export interface Ejercicio5RichText extends Struct.ComponentSchema {
+  collectionName: 'components_ejercicio5_rich_texts';
+  info: {
+    description: '';
+    displayName: 'richText';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+  };
+}
+
+export interface Ejercicio5Text extends Struct.ComponentSchema {
+  collectionName: 'components_ejercicio5_texts';
+  info: {
+    displayName: 'text';
+  };
+  attributes: {
+    tittle: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface EventosAdditionalDetails extends Struct.ComponentSchema {
   collectionName: 'components_eventos_additional_details';
   info: {
@@ -67,6 +110,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'classes.aditional-details': ClassesAditionalDetails;
+      'ejercicio5.components': Ejercicio5Components;
+      'ejercicio5.media': Ejercicio5Media;
+      'ejercicio5.rich-text': Ejercicio5RichText;
+      'ejercicio5.text': Ejercicio5Text;
       'eventos.additional-details': EventosAdditionalDetails;
       'teachers.additional-details': TeachersAdditionalDetails;
       'topics.subtopics': TopicsSubtopics;
