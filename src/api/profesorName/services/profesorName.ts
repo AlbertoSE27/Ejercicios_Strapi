@@ -1,0 +1,5 @@
+/**
+ * profesorName service
+ */
+
+export default () => ({});
