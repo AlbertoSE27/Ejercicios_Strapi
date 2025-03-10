@@ -28,20 +28,17 @@
         "audios"
       ]
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "\"PDF\"",
-        "\"Video\"",
-        "\"Imagen\"",
-        "\"Document\""
-      ]
-    },
     "evento": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::evento.evento",
       "inversedBy": "materials"
+    },
+    "types": {
+      "type": "dynamiczone",
+      "components": [
+        "types.materials"
+      ]
     }
   }
 }

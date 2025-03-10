@@ -24,23 +24,16 @@
       "type": "integer",
       "unique": true
     },
-    "subtopics": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::topic.topic",
-      "mappedBy": "topic"
-    },
-    "topic": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::topic.topic",
-      "inversedBy": "subtopics"
-    },
     "evento": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::evento.evento",
       "inversedBy": "topics"
+    },
+    "subtopics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "topics.subtopics"
     }
   }
 }

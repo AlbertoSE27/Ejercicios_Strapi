@@ -472,9 +472,7 @@ export interface ApiMaterialMaterial extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     tittle: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<
-      ['"PDF"', '"Video"', '"Imagen"', '"Document"']
-    >;
+    types: Schema.Attribute.DynamicZone<['types.materials']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -547,9 +545,8 @@ export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     order: Schema.Attribute.Integer & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
-    subtopics: Schema.Attribute.Relation<'oneToMany', 'api::topic.topic'>;
+    subtopics: Schema.Attribute.Component<'topics.subtopics', true>;
     tittle: Schema.Attribute.String;
-    topic: Schema.Attribute.Relation<'manyToOne', 'api::topic.topic'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

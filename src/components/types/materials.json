@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_types_materials",
+  "info": {
+    "displayName": "Materials"
+  },
+  "options": {},
+  "attributes": {
+    "Imagen": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "File": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
