@@ -1,4 +1,4 @@
-export default {
+/* export default {
   async getEventsByTeacher(ctx) {
     try {
       const { teacherName } = ctx.request.params;
@@ -14,4 +14,4 @@ export default {
       return ctx.throw(500, "Error al buscar los eventos");
     }
   },
-};
+}; */
