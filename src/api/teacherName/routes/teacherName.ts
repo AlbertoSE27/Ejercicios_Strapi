@@ -1,4 +1,4 @@
-/* export default {
+export default {
   routes: [
     {
       method: "GET",
@@ -11,4 +11,3 @@
     },
   ],
 };
-*/
