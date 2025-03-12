@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   async getEventsByTeacher(ctx) {
     try {
       const { teacherName } = ctx.request.params;
@@ -7,7 +7,9 @@ export default {
       }
       const EventsByTeacher = await strapi
         .documents("api::evento.evento")
-        .findMany({});
+        .findMany({
+          fields: ["tittle"],
+        });
       if (!EventsByTeacher) {
         return ctx.notFound("No se encontraron eventos para el profesor");
       }
