@@ -1,5 +1,5 @@
 module.exports = {
-  async asingTeacherToClass(ctx) {
+  async TeacherToClass(ctx) {
     try {
       const { teacherClass, teacherId, documentIdClass, documentIdTeacher } =
         ctx.request.params;
