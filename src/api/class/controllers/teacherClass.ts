@@ -1,9 +1,8 @@
 module.exports = {
-  async TeacherToClass(ctx) {
+  async assignTeacherToClass(ctx) {
     try {
-      const { teacherClass, teacherId, documentIdClass, documentIdTeacher } =
-        ctx.request.params;
-      if (!teacherClass || !teacherId) {
+      const { documentIdClass, teacherId } = ctx.request.params;
+      if (!documentIdClass || !teacherId) {
         return ctx.notFound("El profesor no tiene clase asignada ni ID");
       }
       const className = await strapi.documents("api::class.class").findOne({
@@ -13,21 +12,23 @@ module.exports = {
       if (!className) {
         return ctx.notFound("Clase no encontada");
       }
-      const teacherIdentificator = await strapi
-        .documents("api::teacher.teacher")
-        .findOne({
-          documentId: documentIdTeacher,
-          filters: { name: "Luis" },
-        });
-      if (!teacherIdentificator) {
+      const teacher = await strapi.documents("api::teacher.teacher").findOne({
+        documentId: teacherId,
+        filters: { name: "Luis" },
+      });
+      if (!teacher) {
         return ctx.notFound("ID profesor no encontrado");
       }
       await strapi.documents("api::class.class").update({
         documentId: documentIdClass,
-        data: { tittle: "Maths" },
+        data: {
+          teachers: {
+            connect: [teacherId],
+          },
+        },
       });
       return ctx.send(className);
-      return ctx.send(teacherIdentificator);
+      return ctx.send(teacher);
     } catch (error) {
       return ctx.throw(500, "Error de asignación de profesor a clase");
     }

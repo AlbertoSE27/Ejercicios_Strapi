@@ -3,7 +3,7 @@ module.exports = {
     {
       method: "POST",
       path: "/class-name-and-id-teacher/:teacherClass",
-      handler: "customeClass.TeacherToClass",
+      handler: "customeClass.assignTeacherToClass",
       config: {
         auth: false,
         policies: [],
