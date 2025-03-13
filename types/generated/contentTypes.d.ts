@@ -421,12 +421,7 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
       true
     >;
     components: Schema.Attribute.DynamicZone<
-      [
-        'ejercicio5.text',
-        'ejercicio5.rich-text',
-        'ejercicio5.media',
-        'ejercicio5.components',
-      ]
+      ['ejercicio5.text', 'ejercicio5.rich-text', 'ejercicio5.media']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -440,7 +435,7 @@ export interface ApiEventoEvento extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     materials: Schema.Attribute.Relation<'oneToMany', 'api::material.material'>;
     publishedAt: Schema.Attribute.DateTime;
-    teachers: Schema.Attribute.Relation<'oneToMany', 'api::teacher.teacher'>;
+    teachers: Schema.Attribute.Relation<'manyToMany', 'api::teacher.teacher'>;
     tittle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -510,7 +505,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     email: Schema.Attribute.Email &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    evento: Schema.Attribute.Relation<'manyToOne', 'api::evento.evento'>;
+    eventos: Schema.Attribute.Relation<'manyToMany', 'api::evento.evento'>;
     lastName: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;

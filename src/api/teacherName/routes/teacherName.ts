@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
   routes: [
     {
       method: "GET",
@@ -10,4 +10,4 @@ module.exports = {
       },
     },
   ],
-};
+}; */

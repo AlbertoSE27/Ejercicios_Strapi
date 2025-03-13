@@ -1,17 +1,17 @@
 {
-  "collectionName": "components_types_materials",
+  "collectionName": "components_types_videos",
   "info": {
-    "displayName": "Imagen",
+    "displayName": "Video",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "imagen": {
+    "video": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images"
+        "videos"
       ]
     }
   }

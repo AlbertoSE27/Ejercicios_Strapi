@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "Theme": {
+    "theme": {
       "type": "enumeration",
       "enum": [
         "Theme 1",

@@ -26,9 +26,9 @@
     },
     "teachers": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::teacher.teacher",
-      "mappedBy": "evento"
+      "mappedBy": "eventos"
     },
     "topics": {
       "type": "relation",
@@ -47,8 +47,7 @@
       "components": [
         "ejercicio5.text",
         "ejercicio5.rich-text",
-        "ejercicio5.media",
-        "ejercicio5.components"
+        "ejercicio5.media"
       ]
     }
   }

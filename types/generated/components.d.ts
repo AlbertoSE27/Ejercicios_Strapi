@@ -13,18 +13,11 @@ export interface ClassesAditionalDetails extends Struct.ComponentSchema {
   };
 }
 
-export interface Ejercicio5Components extends Struct.ComponentSchema {
-  collectionName: 'components_ejercicio5_components';
-  info: {
-    displayName: 'components';
-  };
-  attributes: {};
-}
-
 export interface Ejercicio5Media extends Struct.ComponentSchema {
   collectionName: 'components_ejercicio5_media';
   info: {
-    displayName: 'media';
+    description: '';
+    displayName: 'Imagen Galery';
   };
   attributes: {
     media: Schema.Attribute.Media<
@@ -48,7 +41,8 @@ export interface Ejercicio5RichText extends Struct.ComponentSchema {
 export interface Ejercicio5Text extends Struct.ComponentSchema {
   collectionName: 'components_ejercicio5_texts';
   info: {
-    displayName: 'text';
+    description: '';
+    displayName: 'List of links';
   };
   attributes: {
     tittle: Schema.Attribute.String;
@@ -88,21 +82,41 @@ export interface TopicsSubtopics extends Struct.ComponentSchema {
     displayName: 'Subtopics';
   };
   attributes: {
-    Theme: Schema.Attribute.Enumeration<
+    theme: Schema.Attribute.Enumeration<
       ['Theme 1', 'Theme 2', 'Theme 3', 'Theme 4', 'Theme 5']
     >;
+  };
+}
+
+export interface TypesFiles extends Struct.ComponentSchema {
+  collectionName: 'components_types_files';
+  info: {
+    displayName: 'Files';
+  };
+  attributes: {
+    pdf: Schema.Attribute.Media<'files'>;
   };
 }
 
 export interface TypesMaterials extends Struct.ComponentSchema {
   collectionName: 'components_types_materials';
   info: {
-    displayName: 'Materials';
+    description: '';
+    displayName: 'Imagen';
   };
   attributes: {
-    File: Schema.Attribute.Media<'files'>;
-    Imagen: Schema.Attribute.Media<'images'>;
-    Video: Schema.Attribute.Media<'videos'>;
+    imagen: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface TypesVideo extends Struct.ComponentSchema {
+  collectionName: 'components_types_videos';
+  info: {
+    description: '';
+    displayName: 'Video';
+  };
+  attributes: {
+    video: Schema.Attribute.Media<'videos'>;
   };
 }
 
@@ -110,14 +124,15 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'classes.aditional-details': ClassesAditionalDetails;
-      'ejercicio5.components': Ejercicio5Components;
       'ejercicio5.media': Ejercicio5Media;
       'ejercicio5.rich-text': Ejercicio5RichText;
       'ejercicio5.text': Ejercicio5Text;
       'eventos.additional-details': EventosAdditionalDetails;
       'teachers.additional-details': TeachersAdditionalDetails;
       'topics.subtopics': TopicsSubtopics;
+      'types.files': TypesFiles;
       'types.materials': TypesMaterials;
+      'types.video': TypesVideo;
     }
   }
 }

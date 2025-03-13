@@ -26,12 +26,6 @@
       "required": true,
       "unique": true
     },
-    "evento": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::evento.evento",
-      "inversedBy": "teachers"
-    },
     "additionalDetails": {
       "type": "component",
       "repeatable": true,
@@ -42,6 +36,12 @@
       "relation": "manyToMany",
       "target": "api::class.class",
       "mappedBy": "teachers"
+    },
+    "eventos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::evento.evento",
+      "inversedBy": "teachers"
     }
   }
 }

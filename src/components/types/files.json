@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_types_files",
+  "info": {
+    "displayName": "Files"
+  },
+  "options": {},
+  "attributes": {
+    "pdf": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

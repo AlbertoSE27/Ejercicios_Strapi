@@ -1,19 +1,21 @@
 {
   "collectionName": "components_ejercicio5_media",
   "info": {
-    "displayName": "media"
+    "displayName": "Imagen Galery",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
