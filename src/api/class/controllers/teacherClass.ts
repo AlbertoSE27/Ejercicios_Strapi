@@ -1,4 +1,4 @@
-/* module.exports = {
+module.exports = {
   async assignTeacherToClass(ctx) {
     try {
       const { documentIdClass, teacherId } = ctx.request.params;
@@ -20,7 +20,6 @@
         return ctx.notFound("ID profesor no encontrado");
       }
       await strapi.documents("api::class.class").update({
-        documentId: documentIdClass,
         data: {
           teachers: {
             connect: [teacherId],
@@ -33,4 +32,4 @@
       return ctx.throw(500, "Error de asignación de profesor a clase");
     }
   },
-}; */
+};
