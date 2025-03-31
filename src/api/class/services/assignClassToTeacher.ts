@@ -3,7 +3,7 @@ Que el profesor no tenga más de 5 clases activas (límite personalizable).
 Que la clase no tenga más de 3 profesores asignados.
 Si la asignación es exitosa, se enviará una notificación automática.*/
 
-module.exports = {
+/*module.exports = {
   async assignTeacherToClass(teacherId, classId) {
     try {
       const limitClasses = 5;
@@ -31,4 +31,4 @@ module.exports = {
       return "Error al asignar profesor a la clase" + error.message;
     }
   },
-};
+};*/

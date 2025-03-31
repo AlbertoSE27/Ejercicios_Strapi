@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   async getEventsByTeacher(ctx) {
     try {
       const { teacherName, teacherId } = ctx.request.params;
@@ -20,4 +20,4 @@ module.exports = {
       return ctx.throw(500, "Error al buscar los eventos");
     }
   },
-};
+};*/

@@ -1,7 +1,7 @@
 /* EJERCICIO 7.1: Cada vez que se asigna un profesor a una clase, el número de clases que imparte deberá incrementarse automáticamente y 
 si se elimina una asignación, el número de clases debe disminuir.*/
 
-module.exports = {
+/*module.exports = {
   async afterCreate(event) {
     const { result } = event;
     const teacherId = result.documentId;
@@ -27,4 +27,4 @@ module.exports = {
       populate: { data: { classes: teacherClasses.length } },
     });
   },
-};
+};*/

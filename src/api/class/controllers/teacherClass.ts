@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   async assignTeacherToClass(ctx) {
     try {
       const { documentIdClass, teacherId } = ctx.request.params;
@@ -32,4 +32,4 @@ module.exports = {
       return ctx.throw(500, "Error de asignación de profesor a clase");
     }
   },
-};
+};*/
